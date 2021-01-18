@@ -1,0 +1,344 @@
+// // 共通の内容ここから
+// $hedder-collor: #8FC8E4;
+// $bg-color: white;
+// @forward "css/_kiran-bt";
+
+// //  #e6e6e6;
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '../css/_kiran-bt.css';
+
+
+body {
+   margin: 0;
+   padding-top: 100px;
+   padding: 0;
+   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   background-color:  white;
+
+   a {
+      text-decoration: none;
+      color: #4b4b4b;
+   }
+}
+
+h1 {
+   margin: 0;
+   padding: 0;
+   font-size: 24px;
+}
+
+
+
+/* ここからヘッダーの記述 */
+header {
+   width: 100%;
+   padding: 30px 4% 10px;
+   background-color:  #8FC8E4;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   display: flex;
+   align-items: center;
+
+   .logo-mini {
+      width: 80px;
+   }
+
+   nav {
+      margin: 0 0 0 auto;
+      padding-right: 100px;
+      // position: absolute;
+      // z-index: 99;
+
+      ul {
+         list-style: none;
+         margin: 0;
+         display: flex;
+
+         li {
+            margin: 0 0 0 15px;
+            font-size: 14px;
+         }
+      }
+   }
+}
+
+/* ここまでヘッダーの記述 */
+// 共通の内容ここまで
+
+
+
+// /TOP画像の記述/
+.block_bg {
+   // background: url("../img/mini2.png") center;
+   background-size: cover;
+   width: 100%;
+   padding-top: 20%;
+}
+
+// /TOP画像の記述ここまで/
+
+
+
+//ページ全体をくるむラッパー ここから
+.wrapper {
+
+
+   //コンテンツラッパーここから
+   .contents-wrapper {
+      // padding: 50px;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      .title-wrapper {
+         display: flex;
+         flex-wrap: wrap-reverse;
+         justify-content: space-between;
+         width: 90%;
+         // padding: 20px;
+         margin-top: 50px;
+         margin-bottom: 30px;
+
+         .title-left {
+            width: 60%;
+            margin: 30px 0;
+            h1{
+               
+               margin-bottom: 25px;
+            }
+            p {
+               font-size: 16px;
+               font-weight: 600;
+               line-height: 30px;
+               margin-left: 40px;
+            }
+         }
+
+         .title-right {
+            width: 30%;
+            margin: 0 auto;
+            display: flex;
+
+            .character1{
+               width:60px;
+            }
+
+           .shiny-btn2 {
+               white-space: nowrap;
+               width: 150px;
+               height:20px;
+               background-color: #F1CF09;
+            }
+             .character2{
+               width:100px;
+            }
+
+         }
+
+      }
+
+
+      .project {
+         width: 80%;
+         margin: 0 auto;
+         display: flex;
+         justify-content: center;
+
+         .right{
+            width: 50%;
+            .donate_image_one {
+               width: 100%;
+            }
+            img {
+               width: 90%;
+            }
+         }
+
+         .left {
+            width: 50%;
+            .doante_point {
+               span {
+                  font-size: 40px;
+               }
+               p {
+                  font-size: 22px;
+                  line-height: 30px;
+                  font-weight: 700;
+               }
+            }
+         }
+      }
+
+      /* テーブル プロジェクト記事ここまで */
+
+
+      //ミニコンテンツの２つここから
+      .mini-contents-wrapper {
+         width: 90%;
+         margin-top: 100px;
+         margin-bottom: 50px;
+         display: flex;
+
+         .mini-box-right {
+            width: 50%;
+            height:500px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .donate_image_sub {
+               width: 80%;
+               
+               margin: 0 auto;
+              
+               img {
+                  width: 100%;
+                  height:250px;
+                   margin-bottom: 40px;
+               }
+            }
+
+            .donate_text_sub {
+               width: 80%;
+               margin: 0 auto;
+               font-size: 16px;
+               line-height: 30px;
+               margin: 0 auto;
+            }
+         }
+
+         .mini-box-left {
+            width: 50%;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .donate_image_sub {
+               width: 80%;
+               margin: 0 auto;
+               margin-bottom: 40px;
+               img {
+                  width: 100%;
+               }
+            }
+
+            .donate_text_sub {
+               width: 80%;
+               margin: 0 auto;
+               font-size: 16px;
+               line-height: 30px;
+               margin: 0 auto;
+            }
+         }
+
+        
+
+         
+      }
+
+      //ミニコンテンツの２つここまで
+
+      .info {
+         width: 70%;
+
+         .info-text {
+            font-size: 17px;
+            padding-left: 120px;
+            letter-spacing: 5px;
+
+            .shiny-btn2 {
+               white-space: nowrap;
+               width: auto;
+               // background-color: #fdf4a5;
+            }
+         }
+
+
+         .clearfix::after {
+            // content: "";
+            display: block;
+            clear: both;
+         }
+
+
+      }
+
+      //コンテンツラッパーここまで
+      .btn {
+         width: 80%;
+         margin-bottom: 100px;
+      }
+
+
+   }
+
+}
+
+//ラッパーここまで
+
+
+
+
+/* ここからフッター */
+.footer,
+.push {
+   height: 50px;
+   background-color: #2c061f;
+   color: #fff;
+   
+}
+
+.Copyright {
+   font-size: 8px;
+   text-align: center;
+   padding: 20px;
+}
+
+/* ここまでフッター */
+
+shiny-btn2 {
+    display: block;
+    position: relative;
+    width: 40%;/*ボタンの幅*/
+    padding: 10px 0;
+    margin: 30px auto;
+    background-color: #F1CF09;/*ボタンの色*/
+    box-shadow: 0 3px 0 0 black;/*影の色(rgbaの値を変更)*/
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+.shiny-btn2:hover {
+    text-decoration: none;
+    color: black;
+    box-shadow: none;
+    transform: translateY(3px);
+}
+.shiny-btn2::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.2s;
+    animation: shiny-btn2 3s ease-in-out infinite;
+}
+
+@keyframes shiny-btn2 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}

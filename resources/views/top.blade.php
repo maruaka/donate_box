@@ -1,22 +1,3 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -28,6 +9,7 @@
     <link rel="icon" href="img/favicon.ico">
     <!-- キランとひかるボタン用リンク -->
     <link rel="stylesheet" href="css/_kiran-bt.css">
+    <link rel="stylesheet" href="{{ secure_asset('css/test.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
@@ -39,15 +21,15 @@
         </h1>
         <nav class="pc-nav">
             <ul>
-                <li><a href="#story">STORY</a></li>
-                <li><a href="#service">SERVICE</a></li>
+                <li><a href="">STORY</a></li>
+                <li><a href="">SERVICE</a></li>
        
             </ul>
         </nav>
     </header>
 
     <!-- 背景 -->
-    <!-- <div class="background"></div> -->
+     <div class="background">
     <!-- 背景 -->
 
 
@@ -62,29 +44,23 @@
 
 
                 <div class="top-right">
-                    <img class="top-logo" src="img/logo.png" alt="">
+                    <img class="top-logo" src="{{ secure_asset('/images/logo.png') }}" alt="">
                 </div>
                 <div class="top-left">
-                    <div class="top_catch_box"><img class="top-catch" src="img/catch.png" alt=""></div>
+                    <div class="top_catch_box"><img class="top-catch" src="{{ secure_asset('/images/catch.png') }}" alt=""></div>
                     <div class="tree_box"><img class="tree" src="img/tree.png" alt=""></div>
                 </div>
             </div>
             <div class="button-box">
 
-                <a href="#story" class="shiny-btn2">About Us</a>
+                <a href="" class="shiny-btn2">About Us</a>
 
-                <a href="all.html" class="shiny-btn2">応援する</a>
+                <a href="{{ route('blog.index')}}" class="shiny-btn2">応援する</a>
 
-                <a href="index.html" class="shiny-btn2">投稿者さま</a>
+                <a href="{{ route('blog.create')}}" class="shiny-btn2">投稿者さま</a>
 
             </div>
-
-
         </div>
-
-
-
-
 
 
         <!-- TOP画面部分ここまで -->
@@ -112,7 +88,6 @@
         <!-- サービス説明画面ここから -->
 
         <div id="service">
-
    
         <div class="setsumei-box">
             <h2>プロジェクトの木の育て方と支援のしかた</h2>
@@ -125,7 +100,7 @@
         </div>
 
             <div class="setumei-img-box">
-                <img class="setsumei" src="img/setsumei-.png" alt="">
+                <img class="setsumei" src="{{ secure_asset('/images/setsumei-.png') }}" alt="">
             </div>
         </div>
 
@@ -145,7 +120,7 @@
 
     <!-- サービス説明画面ここまで -->
 
-
+</div> 
     <footer class="footer">
         <div class="Copyright">Copyright © 2021, SUKU-SUKU All Right Reserved Anup</div>
     </footer>
