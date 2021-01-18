@@ -16,8 +16,9 @@ use App\Http\Controllers\DonationController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('top');
 });
+
 
 Route::resource('blog', BlogController::class);
 

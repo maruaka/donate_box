@@ -1,0 +1,45 @@
+/* //キランとひかるボタン */
+
+.shiny-btn2 {
+    display: block;
+    position: relative;
+    width: 40%;/*ボタンの幅*/
+    padding: 10px 0;
+    margin: 30px auto;
+    background-color: #F1CF09;/*ボタンの色*/
+    box-shadow: 0 3px 0 0 black;/*影の色(rgbaの値を変更)*/
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+.shiny-btn2:hover {
+    text-decoration: none;
+    color: black;
+    box-shadow: none;
+    transform: translateY(3px);
+}
+.shiny-btn2::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.2s;
+    animation: shiny-btn2 3s ease-in-out infinite;
+}
+
+@keyframes shiny-btn2 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+/* // キランとひかるボタンここまで */
