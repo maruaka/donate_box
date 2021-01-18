@@ -1,0 +1,17 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+
+
+
+.content {
+    .odd {
+        background-color: #fff;
+    }
+    .even {
+        background-color: #efefef;
+    }
+}
