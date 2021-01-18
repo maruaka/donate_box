@@ -30,6 +30,7 @@
                    
                    
                    
+                   
                    <!--<img src="{{asset('storage/storage/images/one/'.$blog->file_name_one)}}" class="d-block rounded-circle mb-3"/>-->
                    
                    <!--<img src="{{asset('storage/storage/images/twe/'.$blog->file_name_twe)}}" class="d-block rounded-circle mb-3"/>-->
