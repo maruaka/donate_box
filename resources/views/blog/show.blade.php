@@ -38,7 +38,7 @@
     <!-- TOP画像ここまで -->
 
 
-
+ 
     <!-- ページ全体を囲むラッパー -->
     <div class="wrapper">
         <!-- プロジェクト詳細ここから -->
@@ -46,15 +46,15 @@
 
             <div class="title-wrapper">
                 <div class="title-left">
-                    <h1> {{$blog->title}}</h1>
-                    <p> {{$blog->sub_title}}</p>
+                    <h1>{{$show->title}} </h1>
+                    <p> {{$show->subtitle}}</p>
                 </div>
 
                 <div class="title-right">
                     <!-- <section>
                   <img class="character1" src="img/safety.png" alt="">
                    </section> -->
-                    <a href="{{ route('donation',$blog->id)}}" class="shiny-btn2">寄付する</a>
+                    <a href="{{ route('donation',$show->id)}}" class="shiny-btn2">寄付する</a>
                    <section>
                   <!--<img class="character2" src="img/watering-plants.png" alt="">-->
                   
@@ -69,7 +69,7 @@
             
                     <div class="right">
 
-                       <img class="character2" src="{{ Storage::url($blog->file_path_one)}}"/>
+                       <img class="character2" src="{{ Storage::url($show->file_path_one)}}"/>
                             <!--<img src="img/1.jpg" alt="">-->
                         </div>
                     
@@ -82,12 +82,16 @@
                                 <p>
                                     <span>🌱</span>
                                     <!-- ここにポイント -->
-                                    　現在：{{$blog->point}}
+                                    　現在：    @if($show->points == '')
+                                                    0 point
+                                                @elseif($show->points > '1')
+                                                {{$show->points}} point
+                                                @endif
                                 </p>
                             </div>
 
                             <div class="donate_text_one">
-                               <p>　{{$blog->text_one}}
+                               <p>　{{$show->text_one}}
                                </p>
 
                             </div>
@@ -104,11 +108,11 @@
                 <div class="mini-box-right">
 
                     <div class="donate_image_sub">
-                       <img src="{{ Storage::url($blog->file_path_twe)}}"/>
+                       <img src="{{ Storage::url($show->file_path_twe)}}"/>
                     </div>
 
                     <div class="donate_text_sub">
-                        <p>{{$blog->text_twe}}
+                        <p>{{$show->text_twe}}
                         </p>
                     </div>
                 </div>
@@ -117,19 +121,38 @@
                 <div class="mini-box-left">
 
                     <div class="donate_image_sub">
-                        <img src="{{ Storage::url($blog->file_path_three)}}"/>
+                        <img src="{{ Storage::url($show->file_path_three)}}"/>
                     </div>
                     <div class="donate_text_sub">
-                        <p>　{{$blog->text_three}}
+                        <p>　{{$show->text_three}}
                         </p>
                     </div>
                 </div>
 
             </div>
+            
+            
+            <div class="tree_box">
+                @if($show->points >= '80')
+                80
+                @elseif($show->points >= '50' && $show->points < '80')
+                50
+                @elseif($show->points >= '5' && $show->points < '50')
+                20
+                @elseif($show->points == '0')
+                <img class="" src="{{ secure_asset('/images/ki.JPG') }}" alt="">
+                @endif
+            </div>
+            
+            
+          
+           
+        
+            
             <!-- ミニコンテンツの２つ ここまで-->
 
             <div class="btn">
-                <a href="{{ route('donation',$blog->id)}}" class="shiny-btn2">
+                <a href="{{ route('donation',$show->id)}}" class="shiny-btn2">
                 <p class="info-text">
                     応援よろしくお願いします
                 </p>
@@ -138,7 +161,7 @@
             <!-- PUSHはこの位置でないとダメ どうゆうこと？-->
             <!-- <div class="push"></div> -->
         </div>
-
+ 
 
 
     </div>

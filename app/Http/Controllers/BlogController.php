@@ -31,7 +31,7 @@ class BlogController extends Controller
         //           ->groupByRaw('blog_id')
         //           ->get();
         
-            $points = DB::table('donations')
+        $points = DB::table('donations')
                      ->select('blog_id',DB::raw('SUM(point) as points'))
                      ->groupBy('blog_id');
                     //  ->get();
@@ -137,13 +137,30 @@ class BlogController extends Controller
     public function show($id)
     {
         
-        $blog = Blog::find($id);
-        // ddd($blog);
-        // $point = $blog->select('', 'email as user_email')->get();
-        return view('blog.show',['blog'=>$blog]);
+        // $blog = Blog::find($id);
        
+        // ddd($blog->points);
+        // return view('blog.show',['blog'=>$blog]);
        
-        
+        $points = DB::table('donations')
+                     ->select('blog_id',DB::raw('SUM(point) as points'))
+                     ->groupBy('blog_id');
+        // ddd($points);
+        //   $blog= new stdClass();
+          $show = DB::table('blogs')
+                    // ->where('blog_id',$id)
+                    ->leftJoinSub($points,'points',function($join){
+                        $join->on('blogs.id','=','points.blog_id');
+                    })->find($id); 
+                    
+                    // ddd($show);
+        return view('blog.show',[
+            'show'=> $show
+            ]);
+        // return view('blog.show',[
+        //     'blog'=>$blog,
+        //     'points' =>$points
+        //     ]);
     }
 
     /**
