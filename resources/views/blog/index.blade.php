@@ -47,10 +47,17 @@
             <table class="project">
                 <tr>
                     <td class="td-right"><img class="all-img" src="{{ Storage::url($blog->file_path_three)}}" class="d-block rounded-circle mb-3"/></td>
+                    <!--<td class="td-right"><img class="all-img" id="mytree" src="{{ secure_asset('/images/ki.png')}}"/></td>-->
+                    
                     <td class="td-left">
                         <div>
                             <div>
-                                🌱　現在point：{{$blog->points}}
+                                🌱　<p>現在のpoint：
+                                  @if($blog->points == '')
+                                     0 point</p>
+                                @elseif($blog->points > '0')
+                                   {{$blog->points}} point</p>
+                                @endif
                             </div>
                             <table>
                                 <tr>
@@ -61,9 +68,10 @@
                             </table>
                             <div>
                                 　{{$blog->text_one}}
+                                　
                             </div>
-                            <div class="point_box">
-                                <p>{{$blog->points}} point</p>
+                               
+                             
                             </div>
                         </div>
                     </td>
@@ -81,6 +89,34 @@
     <footer class="footer">
         <div class="Copyright">Copyright © 2021, SUKU-SUKU All Right Reserved Anup</div>
     </footer>
+    
+    
+    
+    
+    <script>
+        
+        let pic_src = new Array("img/1.jpg","img/2.jpg","img/3.jpg");
+        let num = -1;
+
+        
+        function slideshow() {
+            if(num == 2){
+                num = 0;
+            } else {
+                num ++;
+            }
+            document.getElementById("mypic").src = pic_src[num];
+            setTimeout("slideshow()",3000);
+        }
+        
+         slideshow();
+         
+         
+    </script>
+    
+    
+    
+    
 </body>
 
 </html>
