@@ -47,6 +47,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         // return redirect(RouteServiceProvider::HOME);
-        return redirect()->route('blog.index');
+        // return redirect()->route('blog.create');
+        return view('blog.create');
     }
 }

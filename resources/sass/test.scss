@@ -78,7 +78,7 @@ header {
 .background_twe {
    background-image: url(../images/story.png);
    background-repeat: no-repeat;
-   background-size: 1300px;
+   background-size: 1500px;
   
    
 }
@@ -135,6 +135,7 @@ header {
          .top-left {
             width:60%;
             margin-top: 100px;
+            margin-left:100px;
             
             .top-catch {
                width: 340px;
@@ -243,6 +244,8 @@ header {
    .button-wrapper {
       padding: 30px;
       width: 80%;
+      margin:0 auto;
+      
 
       .shiny-btn2 {
          width: 270px;

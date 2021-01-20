@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>suku-suku</title>
     <link rel="stylesheet" href="{{ secure_asset('css/project.css') }}">
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico{{ secure_asset('images/favicon.ico') }}">
     <!-- キランとひかるボタン用リンク -->
     <link rel="stylesheet" href="css/_kiran-bt.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
@@ -19,12 +19,12 @@
     <!-- ヘッダーここから -->
     <header>
         <h1>
-            <a href="index.html"><img class="logo-mini" src="{{ secure_asset('/images/logo-mini.png') }}" alt=""></a>
+            <a href="{{ route('blog.index')}}"><img class="logo-mini" src="{{ secure_asset('/images/logo-mini.png') }}" alt=""></a>
         </h1>
         <nav class="pc-nav">
             <ul>
-                <li><a href="index.htmlstory">STORY</a></li>
-                <li><a href="index.htmlservice">SERVICE</a></li>
+                 <li><a href="{{ route('blog.index')}}">TOP</a></li>
+                <li><a href="{{ route('blog.create')}}" class="">投稿者様投稿ページ</a></li>
                 
             </ul>
         </nav>
@@ -34,7 +34,9 @@
 
 
     <!-- top画像部分 -->
-    <div class="block_bg"></div>
+    <div class="block_bg">
+        
+    </div>
     <!-- TOP画像ここまで -->
 
 
@@ -152,7 +154,7 @@
                   @elseif($show->points >= '0' && $show->points < '20')
                  <img src="{{ secure_asset('/images/ki--3.png') }}" alt="">
                  
-                @elseif($show->points == '0')
+                @elseif($show->points < '0')
                 <img src="{{ secure_asset('/images/ki-1.png') }}" alt="">
                 @endif
             </div>

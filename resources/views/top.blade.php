@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>suku-suku</title>
-    <link rel="stylesheet" href="css/index.css">
+   
     <link rel="icon" href="{{ secure_asset('images/favicon.ico') }}">
     <!-- キランとひかるボタン用リンク -->
     <link rel="stylesheet" href="css/_kiran-bt.css">
@@ -21,21 +21,37 @@
         </h1>
         <nav class="pc-nav">
             <ul>
-                <li><a href="">STORY</a></li>
-                <li><a href="">SERVICE</a></li>
+                <!--<li></li><a href="{{ route('blog.create')}}" class="">投稿者さま</a></li>-->
+
+                
                  @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+               
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                        <!--<li></li><a href="{{ url('/dashboard') }}">Dashboard</a></li>-->
+                        
+                        <li> <form method="POST" action="{{ route('logout') }}">
+                         @csrf
+
+                         <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Logout') }}
+                        </x-responsive-nav-link>
+                    </form></li>
+                    
+                    <li><a href="{{ route('blog.create')}}" class="">投稿者様投稿ページ</a></li>
+                    
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+                        <li></li><a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a></li>
+                        
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                            <li></li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">投稿者新規登録はこちらから</a></li>
                         @endif
                     @endauth
                 </div>
             @endif
+            
+          
        
             </ul>
         </nav>
@@ -67,11 +83,11 @@
            
             <div class="button-box">
 
-                <a href="" class="shiny-btn2">About Us</a>
+                <a href="#story" class="shiny-btn2">About Us</a>
 
                 <a href="{{ route('blog.index')}}" class="shiny-btn2">応援する</a>
 
-                <a href="{{ route('blog.create')}}" class="shiny-btn2">投稿者さま</a>
+               
 
                 </div>
              </div>

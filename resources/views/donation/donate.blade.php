@@ -66,8 +66,9 @@
     </h1>
     <nav class="pc-nav">
       <ul>
-        <li><a href="index.htmlstory">STORY</a></li>
-        <li><a href="index.htmlservice">SERVICE</a></li>
+         <li><a href="{{ route('blog.index')}}">TOP</a></li>
+        <li><a href="{{ route('blog.create')}}" class="">投稿者様投稿ページ</a></li>
+       
         
       </ul>
     </nav>

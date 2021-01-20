@@ -147,19 +147,21 @@ header nav ul li {
   border-collapse: collapse;
   background-color: white;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   border-radius: 10px;
-  width: 80%;
+  width: 70%;
+  height: 300px;
+  box-shadow: 15px 15px 0px 0 #3cc2eb;
 }
 .wrapper .contents-wrapper .project_box .project .td-right {
   padding-left: 30px;
-  width: 40%;
+  width: 45%;
 }
 .wrapper .contents-wrapper .project_box .project .td-right .all-img {
-  width: 250px;
+  width: 300px;
 }
 .wrapper .contents-wrapper .project_box .project .td-left {
-  width: 60%;
+  width: 55%;
   padding: 20px;
 }
 .wrapper .contents-wrapper .project_box .project .td-left td {
@@ -172,6 +174,12 @@ header nav ul li {
 .wrapper .contents-wrapper .project_box .project .td-left .point_box p {
   text-align: right;
   margin-right: 20px;
+}
+.wrapper .contents-wrapper .project_box .project .td-left .text_box {
+  font-size: 14px;
+}
+.wrapper .contents-wrapper .project_box .project .td-left .text_box p {
+  font-size: 13px;
 }
 
 /* ここからフッター */

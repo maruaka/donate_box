@@ -110,16 +110,12 @@
     </h1>
     <nav class="pc-nav">
       <ul>
-        <li><a href="index.htmlstory">STORY</a></li>
-        <li><a href="index.htmlservice">SERVICE</a></li>
+         <li><a href="{{ route('blog.index')}}">TOP</a></li>
+        <li><a href="{{ route('blog.create')}}" class="">投稿者様投稿ページ</a></li>
         
       </ul>
     </nav>
   </header>
-
-
-
-
 
 
 
@@ -138,6 +134,7 @@
           </div>
         </div>
         <form action="{{ route('blog.store') }}" method="POST" enctype="multipart/form-data">
+           @csrf 
         <div class="">
           <label class="" for="title">タイトル</label>
           <input class="" type="text" name="title" id="title">
