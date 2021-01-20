@@ -88,6 +88,9 @@ header nav ul li {
   white-space: nowrap;
   height: 40px;
 }
+.wrapper .getpass {
+  text-align: center;
+}
 
 .bt-box {
   text-align: center;

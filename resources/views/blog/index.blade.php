@@ -52,7 +52,7 @@
                     
                     <td class="td-left">
                         <div>
-                            <div class="point_box">
+                             <div class="point_box">
                                 　<p>現在のpoint：
                                   @if($blog->points == '')
                                      0 point</p>
@@ -60,13 +60,11 @@
                                    {{$blog->points}} point</p>
                                 @endif
                             </div>
-                            <!--<table>-->
-                            <!--    <tr>-->
-                                  
-                            <!--        <td class="data">👨投稿者：{{$blog->user_name}}</td>-->
-                  
-                            <!--    </tr>-->
-                            <!--</table>-->
+                            <div class="project_title">
+                                　{{$blog->title}}
+                            </div>
+                           
+                           
                             <div class="text_box">
                                 <p class="data">👨投稿者：{{$blog->user_name}}</p>
                                 　{{$blog->text_one}}

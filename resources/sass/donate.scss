@@ -100,13 +100,17 @@ header {
    }
 
    .form-box {
-text-align: center;
+     text-align: center;
 
       .radio-bt-box {
          display: flex;
          white-space: nowrap;
          height: 40px;
       }
+   }
+   
+   .getpass {
+      text-align:center;
    }
 
 }
