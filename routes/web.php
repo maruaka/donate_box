@@ -28,7 +28,7 @@ Route::get('/donation/thx/', [DonationController::class, 'show']);
 Route::resource('donation', DonationController::class);
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('top');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

@@ -109,8 +109,16 @@ header nav ul li {
 }
 
 /* ここまでヘッダーの記述 */
+.block_bg {
+  background-image: url(../images/ki-1.png);
+  background-size: 1000px;
+  width: 100%;
+  padding-top: 20%;
+}
+
 .wrapper {
   min-height: 100%;
+  margin-top: 300px;
   /* フッタの高さと等しいネガティブマージン */
   /* また最後の子要素の潜在的なマージンとしても機能 */
 }

@@ -73,7 +73,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        
+        // ddd($request);
         // ddd($request['subtitle']);
             //   バリデーション
        $validator = Validator::make($request->all(), [
@@ -194,6 +194,7 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $result = Blog::find($id)->delete();
+  return redirect()->route('blog.index');
     }
 }

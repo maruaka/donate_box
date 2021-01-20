@@ -107,22 +107,24 @@ padding-right: 100px;
          border-collapse: collapse;
          background-color: white;
          margin: 0 auto;
-         margin-bottom:30px;
+         margin-bottom:40px;
          //角丸
          border-radius: 10px;
-         width: 80%;
+         width: 70%;
+         height:300px;
+         box-shadow: 15px 15px 0px 0 rgb(60, 194, 235);
 
          .td-right {
             padding-left: 30px;
-            width: 40%;
+            width: 45%;
 
             .all-img {
-               width: 250px;
+               width: 300px;
             }
          }
 
          .td-left {
-            width: 60%;
+            width: 55%;
             padding: 20px;
 
             td {
@@ -136,6 +138,13 @@ padding-right: 100px;
                p {
                   text-align: right;
                   margin-right: 20px;
+               }
+            }
+            
+            .text_box{
+               font-size:14px;
+               p{
+                  font-size:13px;
                }
             }
          }
