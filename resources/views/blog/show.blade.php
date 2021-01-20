@@ -133,6 +133,8 @@
 
             </div>
             
+            
+            <p>projectのpointによって木が成長するよ</p>
             <!--木の成長-->
             <div class="tree_box">
                 
