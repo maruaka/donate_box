@@ -19,7 +19,7 @@
     <!-- ヘッダーここから -->
     <header>
         <h1>
-            <a href="index.html"><img class="logo-mini" src="img/logo-mini.png" alt=""></a>
+            <a href="index.html"><img class="logo-mini" src="{{ secure_asset('/images/logo-mini.png') }}" alt=""></a>
         </h1>
         <nav class="pc-nav">
             <ul>
@@ -56,7 +56,7 @@
                    </section> -->
                     <a href="{{ route('donation',$show->id)}}" class="shiny-btn2">寄付する</a>
                    <section>
-                  <!--<img class="character2" src="img/watering-plants.png" alt="">-->
+                  <img class="character2" src="{{ secure_asset('/images/watering-plants.png') }}" alt="">
                   
                    </section>
                 </div>
@@ -78,7 +78,7 @@
                     <div class="left">
 
                         <div class="doante_point">
-                                <img src="img/bar.png" alt="">
+                                <img src="" alt="">
                                 <p>
                                     <span>🌱</span>
                                     <!-- ここにポイント -->
@@ -131,16 +131,29 @@
 
             </div>
             
-            
+            <!--木の成長-->
             <div class="tree_box">
-                @if($show->points >= '80')
-                80
+                
+                @if($show->points >= '100')
+                 <img src="{{ secure_asset('/images/ki-6.png') }}" alt="">
+                 
+                @elseif($show->points >= '80' && $show->points < '100')
+                 <img src="{{ secure_asset('/images/ki.JPG') }}" alt="">
+                 
                 @elseif($show->points >= '50' && $show->points < '80')
-                50
-                @elseif($show->points >= '5' && $show->points < '50')
-                20
+                 <img src="{{ secure_asset('/images/ki-4.png') }}" alt="">
+                 
+                 @elseif($show->points >= '30' && $show->points < '50')
+                 <img src="{{ secure_asset('/images/ki-3.png') }}" alt="">
+                 
+                 @elseif($show->points >= '20' && $show->points < '30')
+                 <img src="{{ secure_asset('/images/ki-2.png') }}" alt="">
+                 
+                  @elseif($show->points >= '0' && $show->points < '20')
+                 <img src="{{ secure_asset('/images/ki--3.png') }}" alt="">
+                 
                 @elseif($show->points == '0')
-                <img class="" src="{{ secure_asset('/images/ki.JPG') }}" alt="">
+                <img src="{{ secure_asset('/images/ki-1.png') }}" alt="">
                 @endif
             </div>
             

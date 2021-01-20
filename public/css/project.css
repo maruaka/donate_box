@@ -248,6 +248,12 @@ header nav ul li {
   display: block;
   clear: both;
 }
+.wrapper .contents-wrapper .tree_box {
+  width: 400px;
+}
+.wrapper .contents-wrapper .tree_box img {
+  width: 100%;
+}
 .wrapper .contents-wrapper .btn {
   width: 80%;
   margin-bottom: 100px;

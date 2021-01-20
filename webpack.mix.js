@@ -19,6 +19,8 @@ mix.js('resources/js/app.js', 'public/js')
 .sass('resources/sass/show.scss', 'public/css')
 .sass('resources/sass/all.scss', 'public/css')
 .sass('resources/sass/project.scss', 'public/css')
+.sass('resources/sass/donate.scss', 'public/css')
+.sass('resources/sass/donatepost.scss', 'public/css')
 .sass('resources/sass/app.scss', 'public/css');
 
 

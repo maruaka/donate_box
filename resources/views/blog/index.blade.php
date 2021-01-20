@@ -18,7 +18,7 @@
 <body>
     <header>
         <h1>
-            <a href="index.html"><img class="logo-mini" src="img/logo-mini.png" alt=""></a>
+            <a href="index.html"><img class="logo-mini" src="{{ secure_asset('/images/logo-mini.png') }}" alt=""></a>
         </h1>
         <nav class="pc-nav">
             <ul>

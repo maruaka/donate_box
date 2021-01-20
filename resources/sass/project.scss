@@ -269,9 +269,21 @@ header {
          }
 
 
+         
+
       }
 
       //コンテンツラッパーここまで
+      
+      .tree_box{
+            width:400px;
+            img {
+               width:100%;
+               
+            }
+         }
+      
+      
       .btn {
          width: 80%;
          margin-bottom: 100px;
