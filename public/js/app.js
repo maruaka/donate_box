@@ -36315,6 +36315,19 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./resources/sass/thanks.scss":
+/*!************************************!*\
+  !*** ./resources/sass/thanks.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/sass/donatepost.scss":
 /*!****************************************!*\
   !*** ./resources/sass/donatepost.scss ***!
@@ -39333,6 +39346,7 @@ process.umask = function() { return 0; };
 /******/ 			["./resources/sass/all.scss"],
 /******/ 			["./resources/sass/project.scss"],
 /******/ 			["./resources/sass/donate.scss"],
+/******/ 			["./resources/sass/thanks.scss"],
 /******/ 			["./resources/sass/donatepost.scss"],
 /******/ 			["./resources/sass/app.scss"]
 /******/ 		];

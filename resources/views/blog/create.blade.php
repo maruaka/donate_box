@@ -110,8 +110,34 @@
     </h1>
     <nav class="pc-nav">
       <ul>
-         <li><a href="{{ route('blog.index')}}">TOP</a></li>
-        <li><a href="{{ route('blog.create')}}" class="">投稿者様投稿ページ</a></li>
+          <ul>
+                 @if (Route::has('login'))
+               
+                    @auth
+                        <li> <form method="POST" action="{{ route('logout') }}">
+                         @csrf
+
+                         <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Logout') }}
+                        </x-responsive-nav-link>
+                    </form></li>
+                    
+                    <li><a href="{{ route('blog.create')}}" class="">投稿者様投稿ページ</a></li>
+                    
+                    @else
+                        <li></li><a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a></li>
+                        
+                        @if (Route::has('register'))
+                            <li></li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">投稿者新規登録はこちらから</a></li>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+            
+          
+       
+            </ul>
         
       </ul>
     </nav>
