@@ -93,12 +93,12 @@ class BlogController extends Controller
         $image_twe = request()->file('image_twe')->getClientOriginalName();
         $image_three = request()->file('image_three')->getClientOriginalName();
         
-        $image_path_one = request()->file('image_one')->storeAs('public/storage/',$image_one);
+        $image_path_one = request()->file('image_one')->storeAs('public/storage/images',$image_one);
         // ddd($image_path_one);
         //  $image_path_twe = request()->file('image_twe')->storeAs('public/storage/images/twe',$image_twe);
-        $image_path_twe = request()->file('image_twe')->storeAs('public/storage/',$image_twe);
+        $image_path_twe = request()->file('image_twe')->storeAs('public/storage/images',$image_twe);
     //   ddd($image_path_twe);
-         $image_path_three = request()->file('image_three')->storeAs('public/storage/',$image_three);
+         $image_path_three = request()->file('image_three')->storeAs('public/storage/images',$image_three);
 
         
         
