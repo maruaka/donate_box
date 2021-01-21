@@ -47,13 +47,13 @@
             <a href="{{ route('blog.show',$blog->id)}}">
             <table class="project">
                 <tr>
-                    <td class="td-right"><img class="all-img" src="{{ Storage::url($blog->file_path_three)}}" class="d-block rounded-circle mb-3"/></td>
+                    <td class="td-right"><img class="all-img" src="{{ Storage::url($blog->file_path_one)}}" class="d-block rounded-circle mb-3"/></td>
                     <!--<td class="td-right"><img class="all-img" id="mytree" src="{{ secure_asset('/images/ki.png')}}"/></td>-->
                     
                     <td class="td-left">
                         <div>
                              <div class="point_box">
-                                　<p>現在のpoint：
+                                　<p>現在の💗️：
                                   @if($blog->points == '')
                                      0 point</p>
                                 @elseif($blog->points > '0')

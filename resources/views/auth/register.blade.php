@@ -106,8 +106,10 @@
       <div class="wrapper">
         <div class="text-box">
           <img src="{{ secure_asset('/images/watering-plants.png') }}" alt="">
-          <p>いつも応援ありがとうございます！<br>
-            おかげさまでスクスク成長しています！！</p>
+          <p>投稿希望者様はこちらから登録<br>
+          をお願いします。<br>
+            ユーザー登録後プロジェクト投稿<br>
+            ページにつながります。</p>
         </div>
         <br>
 
