@@ -21,14 +21,9 @@
         </h1>
         <nav class="pc-nav">
             <ul>
-                <!--<li></li><a href="{{ route('blog.create')}}" class="">投稿者さま</a></li>-->
-
-                
                  @if (Route::has('login'))
                
                     @auth
-                        <!--<li></li><a href="{{ url('/dashboard') }}">Dashboard</a></li>-->
-                        
                         <li> <form method="POST" action="{{ route('logout') }}">
                          @csrf
 
@@ -43,7 +38,6 @@
                     @else
                         <li></li><a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a></li>
                         
-
                         @if (Route::has('register'))
                             <li></li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">投稿者新規登録はこちらから</a></li>
                         @endif
@@ -101,16 +95,25 @@
         <!-- ストーリー画面ここから -->
         <div id="story"></div>
         <div class="story-box">
-            <h2>STORY</h2>
-            <p>あるところに一人の女の子がいました。<br>
-                お花が大好きなのに、ズボラでお世話ベタ。<br>
-                いつの間にか、枯らしちゃう。<br>
-                そしたら、ママが言いました。</p>
-            <span>「みんなで一緒に育てたら？」</span>
-            <p>なるほど！！　ナイスアイデア！！<br>
-                みんなで育てると楽しいし、成長も早い。<br>
-                ここを見たみんな、手助けして！<br>
-                一緒にプロジェクトの木を育てよう！！！！</p>
+           <h2>ABOUT US</h2>
+
+            <h3>みんなの💗でプロジェクトが育つ！<br>
+                ずっと「見守り続ける」がコンセプトの<br>
+                災害用募金支援サイト SUKU-SUKU</h3>
+
+            <p>SUKU-SUKU(スクスク)は<br>
+                「救う×２」と成長する音「スクスク」のダブルミーニング。<br><br>
+
+                「お金」ではなく「想い」を可視化し<br>
+                プロジェクトを育て、見守る、がコンセプト。<br><br>
+
+                募金額の大きさを💗で、プロジェクトを木に見立て<br>
+                💗を栄養にしてプロジェクトの木が育つイメージです。<br>
+                支援活動の成長を、木の大きさで可視化しています。<br><br>
+
+                活動の輪が年輪のように広がり、大きく育ってほしい。<br>
+                そんな想いで立ち上げました。<br>
+            </p>
             <br>
        
         </div>
@@ -123,16 +126,14 @@
    
         <div class="setsumei-box">
             <h2>プロジェクトの木の育て方と支援のしかた</h2>
-            <p>支援をするたび、プロジェクトの木が成長します。
-                すくすく育てて、みんなで成長を見守ろう！<br>
-                10募金ごとに10💗をGET。<br>
-                SNSで活動を広めていただくと、みなさんの愛情でどんどん大きく！<br>
-                支援の輪が広がります。
+            <p>支援をするたび、プロジェクトの木が成長します。<br>
+               
+                SNSで活動を広めていただくと、 支援の輪が広がります。
             </p>
         </div>
 
             <div class="setumei-img-box">
-                <img class="setsumei" src="{{ secure_asset('/images/setsumei-.png') }}" alt="">
+                <img class="setsumei" src="{{ secure_asset('/images/setsumei-last.png') }}" alt="">
             </div>
         <!--</div>-->
 
