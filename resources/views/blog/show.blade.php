@@ -97,7 +97,7 @@
             
                     <div class="right">
 
-                       <img class="character2" src="{{ Storage::url($show->file_path_one)}}"/>
+                       <img class="character2" src="{{asset('storage/storage/images/'.$show->file_name_one)}}"/>
                             <!--<img src="img/1.jpg" alt="">-->
                         </div>
                     
@@ -141,7 +141,7 @@
                 <div class="mini-box-right">
 
                     <div class="donate_image_sub">
-                       <img src="{{ Storage::url($show->file_path_twe)}}"/>
+                       <img src="{{asset('storage/storage/images/'.$show->file_name_twe)}}"/>
                     </div>
 
                     <div class="donate_text_sub">
@@ -154,7 +154,7 @@
                 <div class="mini-box-left">
 
                     <div class="donate_image_sub">
-                        <img src="{{ Storage::url($show->file_path_three)}}"/>
+                        <img src="{{asset('storage/storage/images/'.$show->file_name_three)}}"/>
                     </div>
                     <div class="donate_text_sub">
                         <p>　{{$show->text_three}}
