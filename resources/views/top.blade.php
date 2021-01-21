@@ -17,7 +17,7 @@
 <body>
     <header>
         <h1>
-            <a href="index.html"><img class="logo-mini" src="img/logo-mini.png" alt=""></a>
+            <a href="{{ route('blog.index')}}"><img class="logo-mini" src="{{ secure_asset('/images/logo-mini.png')}}" alt=""></a>
         </h1>
         <nav class="pc-nav">
             <ul>
@@ -138,7 +138,7 @@
 
             <div class="button-wrapper">
 
-            <a href="all.html" class="shiny-btn2">育てる木を探しに行く ‣</a>
+            <a href="{{ route('blog.index')}}" class="shiny-btn2">育てる木を探しに行く ‣</a>
 
             </div>
         </div>

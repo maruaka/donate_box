@@ -107,7 +107,7 @@
       <div class="wrapper">
         <div class="text-box">
           <img src="{{ secure_asset('/images/watering-plants.png') }}" alt="">
-          <p>ログイン<br></p>
+          <p>ログイン後投稿ページにアクセスできます。<br></p>
         </div>
         <br>
 

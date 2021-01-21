@@ -140,7 +140,7 @@
           <input class="" type="text" name="title" id="title">
         </div>
         <div class="">
-          <label class="" for="subtitle">テキスト</label>
+          <label class="" for="subtitle">サブタイトル</label>
           <input class="" type="text" name="subtitle" id="subtitle">
         </div>
         <div class="">

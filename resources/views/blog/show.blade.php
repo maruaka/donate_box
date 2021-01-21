@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/_kiran-bt.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 </head>
 
 <body>
@@ -48,20 +49,22 @@
 
             <div class="title-wrapper">
                 <div class="title-left">
-                    <h1>{{$show->title}} </h1>
+                   
                     <p> {{$show->subtitle}}</p>
                 </div>
+                
 
                 <div class="title-right">
-                    <!-- <section>
-                  <img class="character1" src="img/safety.png" alt="">
-                   </section> -->
+                  
                     <a href="{{ route('donation',$show->id)}}" class="shiny-btn2">寄付する</a>
                    <section>
                   <img class="character2" src="{{ secure_asset('/images/watering-plants.png') }}" alt="">
-                  
                    </section>
+                   
                 </div>
+                
+                  <h1>{{$show->title}} </h1>
+                 
             </div>
 
 
@@ -100,6 +103,11 @@
 
                     </div>
             </div>
+            
+            <div class="graf_box">
+                <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+                
+            </div>
 
 
             <!-- テーブルプロジェクト記事ここまで -->
@@ -134,8 +142,14 @@
             </div>
             
             
-            <p>projectのpointによって木が成長するよ</p>
-            <!--木の成長-->
+            <p>projectのpointによって木が成長するよ
+          
+　          <a class="twitter-share-button" href="http://twitter.com/intent/tweet?text=sukusukuで応援しよう🌳 {{$show->title}}　　　&amp;url=https://25e8b5ded9214cbea125193cf6263ad3.vfs.cloud9.us-east-1.amazonaws.com/blog/{{$show->id}}&hashtags=sukusuku" data-size="large">
+            Tweet
+                </a>
+             </p>
+
+           
             <div class="tree_box">
                 
                 @if($show->points >= '100')
@@ -188,8 +202,38 @@
     <footer class="footer">
         <div class="Copyright">Copyright © 2021, SUKU-SUKU All Right Reserved Anup</div>
     </footer>
+    
+    <script>
+    
+    // グラフ
+        {{$show->points}}
+  
+        var data = [
+    {
+        domain: { x: [0, 1], y: [0, 1] },
+        value: {{$show->points}},
+        title: { text: "Donate Point" },
+        type: "indicator",
+        mode: "gauge+number",
+        delta: { reference: 100 },
+        gauge: { axis: { range: [null, 100] } }
+    }
+    ];
+
+    var layout = { width: 700, height: 350 };
+    Plotly.newPlot('myDiv', data, layout);
+
+
+
+
+
+    </script>
+    
+    
     <!-- フラッシュアニメ用jsリンク -->
     <script src="js/_flash.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
 </body>
 
 </html>

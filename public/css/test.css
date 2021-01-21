@@ -152,13 +152,13 @@ header nav ul li {
   margin: 0 auto;
 }
 .wrapper .top-wrapper .top-box .top-right .top-logo {
-  width: 70%;
+  width: 80%;
   margin-left: 160px;
 }
 .wrapper .top-wrapper .top-box .top-left {
-  width: 60%;
-  margin-top: 100px;
-  margin-left: 100px;
+  width: 50%;
+  margin-top: 130px;
+  margin-left: 170px;
 }
 .wrapper .top-wrapper .top-box .top-left .top-catch {
   width: 340px;

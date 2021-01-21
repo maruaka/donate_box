@@ -42,7 +42,7 @@ class BlogController extends Controller
          $blogs = DB::table('blogs')
                     ->leftJoinSub($points,'points',function($join){
                         $join->on('blogs.id','=','points.blog_id')
-                        ->orderBy('blogs.created_at','desc');
+                    ->orderBy('blogs.created_at','asc');
                     })->get(); 
                     // ->get();
         // $blogs = DB::table('blogs')->get();
