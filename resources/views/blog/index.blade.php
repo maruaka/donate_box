@@ -69,7 +69,7 @@
             <a href="{{ route('blog.show',$blog->id)}}">
             <table class="project">
                 <tr>
-                    <td class="td-right"><img class="all-img" src="{{asset('storage/storage/images/'.$blog->file_name_one)}}" class="d-block rounded-circle mb-3"/></td>
+                    <td class="td-right"><img class="all-img" src="{{ Storage::url($blog->file_path_one)}}" class="d-block rounded-circle mb-3"/></td>
                     <!--<td class="td-right"><img class="all-img" id="mytree" src="{{ secure_asset('/images/ki.png')}}"/></td>-->
                     
                     <td class="td-left">
